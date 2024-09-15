@@ -1,0 +1,47 @@
+%=================Normal 6T SRAM===================
+importfile('vout_write_6t.csv'); % Change filename appropriately
+vout6t = data(:,1);
+vout16t = data(:,2);
+figure("6T SRAM WSNM");
+plot(vout6t, vout16t);
+hold on; grid on;
+axis square;
+pause;
+
+%=================Normal 8T SRAM===================
+importfile('vout_write_8t.csv'); % Change filename appropriately
+% vin is the first column
+vin8t = data(:,1);
+% vout is the second column
+vout8t = data(:,2);
+figure("8T SRAM WSNM");
+plot(vin8t, vout8t);
+hold on; grid on;
+plot(vout8t, vin8t);
+axis square;
+pause;
+
+%=================Low power 6T SRAM===================
+importfile('vout_write_6t_low.csv'); % Change filename appropriately
+% vin is the first column
+vin6t_l = data(:,1);
+% vout is the second column
+vout6t_l = data(:,2);
+figure("Low Power 6T SRAM WSNM");
+plot(vin6t_l, vout6t_l);
+hold on; grid on;
+plot(vout6t_l, vin6t_l);
+axis square;
+pause;
+
+%=================Low power 8T SRAM===================
+importfile('vout_write_8t_low.csv'); % Change filename appropriately
+% vin is the first column
+vin8t_l = data(:,1);
+% vout is the second column
+vout8t_l = data(:,2);
+figure("Low Power 8T SRAM WSNM");
+plot(vin8t_l, vout8t_l);
+hold on; grid on;
+plot(vout8t_l, vin8t_l);
+axis square;
